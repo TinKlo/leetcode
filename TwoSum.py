@@ -1,4 +1,5 @@
 import random
+import time
 from tqdm import tqdm
 
 random_numbers = random.sample(range(500), 250)
@@ -9,6 +10,11 @@ nums = []
 
 class Solution_1:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        """
+        Function responsible for take given values of nums and target
+        iterate trough them checking for each valuew if the sum of 
+        them is equal to the target value.
+        """
         a=[]
         print(nums)
         print(target)
@@ -19,6 +25,7 @@ class Solution_1:
                     a.append(j)
                     break
                 else:
+                    time.sleep(0.001)
                     continue
 
         print(f"This was List: { nums }")
@@ -27,6 +34,7 @@ class Solution_1:
         if a == []:
             print("no solution possible.")
 
-samples = Solution_1()
+brute = Solution_1()
 
-samples.twoSum(random_numbers, targeted)
+brute.twoSum(random_numbers, targeted)
+
